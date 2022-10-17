@@ -1,0 +1,48 @@
+/* ---------------------------------- Spreading -----------------------------------*/
+const ages = [1,30,24,69,78,12]
+//console.log([...ages]) //copy of ages
+
+//add el element
+ages.push(6)
+
+console.log([...ages,6])
+// object
+const Person ={
+    name:'Fayçel',
+    age:30,
+    Adresse: 'Tunis'
+}
+
+console.log({...Person})  //copy an obj
+//add a key gender
+Person.Gender = 'Masculin'
+console.log({...Person,Gender:'Masculin'})
+//concat
+const ages2 = [2,4.2,66]
+//Es5 
+console.log(ages.concat(ages2))
+//ES6     //concat 2 obj / arrays
+console.log([...ages, ...ages2])
+
+// ==> access the el of array or key of obj to make a copy
+
+/* --------------------- Destructuring ------------------ */
+const Peerson ={
+    name:'Fayçel',
+    age:30,
+    Adresse: 'Tunis'
+}
+ 
+console.log('I am '+ Person.name + ' ' + 'I am ' + Person.age + ' years old' +  ' and I live in ' + Person.Adresse )
+//Template Literals //alt GR 7
+
+const {name,age,Adresse} = Peerson
+console.log(`I am ${name} and I am ${age} years old and I live in ${Adresse}`)
+
+const arr = [1,5,18,26]
+//arr[1]
+const [el1,el2,el4,...rest]  = arr
+console.log(el4)
+
+// simplification ==> put the keys of obj or el of array in a variable
+
